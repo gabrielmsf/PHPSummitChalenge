@@ -1,0 +1,19 @@
+{
+    "name": "locaweb/phpsummit_challenge",
+    "require": {
+        "php": ">=7.1"
+    },
+    "authors": [{
+        "name": "Anderson Oliveira",
+        "email": "anderson.oliveira@locaweb.com.br"
+    }],
+    "autoload": {
+        "psr-4": {
+            "Challenge\\": "src/",
+            "Test": "test/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    }
+}
