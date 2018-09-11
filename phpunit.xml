@@ -1,0 +1,31 @@
+<phpunit
+  bootstrap="bootstrap.php"
+  backupGlobals="false"
+  backupStaticAttributes="false"
+  cacheTokens="true"
+  colors="true"
+  convertErrorsToExceptions="true"
+  convertNoticesToExceptions="true"
+  convertWarningsToExceptions="true"
+  beStrictAboutTestsThatDoNotTestAnything="true"
+  processIsolation="false"
+  stopOnFailure="false"
+  syntaxCheck="true"
+  verbose="true">
+  <testsuites>
+    <testsuite name="challenge">
+      <directory suffix=".php">test</directory>
+    </testsuite>
+  </testsuites>
+  <filter>
+    <whitelist addUncoveredFilesFromWhitelist="true">
+      <directory suffix=".php">src</directory>
+    </whitelist>
+  </filter>
+  <logging>
+    <log type="coverage-html" target="./reports/phpunit-coverage" lowUpperBound="35" highLowerBound="70"/>
+  </logging>
+  <php>
+    <includePath>vendor/pear/pear-core-minimal/src</includePath>
+  </php>
+</phpunit>

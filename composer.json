@@ -4,13 +4,13 @@
         "php": ">=7.1"
     },
     "authors": [{
-        "name": "Anderson Oliveira",
-        "email": "anderson.oliveira@locaweb.com.br"
+        "name": "Anderson Mota",
+        "email": "anderson.mota12@gmail.com"
     }],
     "autoload": {
         "psr-4": {
             "Challenge\\": "src/",
-            "Test": "test/"
+            "Test\\": "test/"
         }
     },
     "require-dev": {
