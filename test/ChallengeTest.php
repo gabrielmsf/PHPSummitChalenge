@@ -45,7 +45,7 @@ class ChallengeTest extends TestCase
     public function testCalcFolderUsedPercent($userId, $userFolders, $userStorage, $userPercentageUsedRoundExpected)
     {
         $folders = $this->getMockBuilder(\Challenge\Models\Folders::class)
-            ->setMethods(['list', 'getStorageSpace'])
+            ->setMethods(['list'])
             ->getMock();
 
         $folders->expects($this->once())
@@ -53,13 +53,8 @@ class ChallengeTest extends TestCase
             ->with($userId)
             ->willReturn($userFolders);
 
-        $folders->expects($this->once())
-            ->method('getStorageSpace')
-            ->with($userId)
-            ->willReturn($userStorage);
-
         $this->challenge = new Challenge($userId);
-        $percentUsed = $this->challenge->calcFolderUsedPercent($folders);
+        $percentUsed = $this->challenge->calcFolderUsedPercent($folders, $userStorage);
 
         $this->assertSame($userPercentageUsedRoundExpected, $percentUsed);
     }
