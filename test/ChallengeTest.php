@@ -13,21 +13,21 @@ class ChallengeTest extends TestCase
     public function providerFoldersUsed()
     {
         $userFolders1 = [
-            (object) ['folderName' => 'Jobs', 'size' => '135MB'],
-            (object) ['folderName' => 'Family', 'size' => '39MB'],
-            (object) ['folderName' => 'Projects', 'size' => '15MB'],
-            (object) ['folderName' => 'Travels', 'size' => '111MB'],
+            (object) ['folderName' => 'Jobs', 'size' => '105MB'],
+            (object) ['folderName' => 'Family', 'size' => '265MB'],
+            (object) ['folderName' => 'Projects', 'size' => '381MB'],
+            (object) ['folderName' => 'Travels', 'size' => '273MB'],
         ];
 
         $userFolders2 = [
-            (object) ['folderName' => 'Drafts', 'size' => '930MB'],
-            (object) ['folderName' => 'Projects', 'size' => '290MB'],
-            (object) ['folderName' => 'Others', 'size' => '1190MB'],
+            (object) ['folderName' => 'Drafts', 'size' => '931MB'],
+            (object) ['folderName' => 'Projects', 'size' => '365MB'],
+            (object) ['folderName' => 'Others', 'size' => '1198MB'],
             (object) ['folderName' => 'Jobs', 'size' => '1090MB'],
         ];
 
         return [
-            [1, $userFolders1, '2GB', '15%'],
+            [1, $userFolders1, '2GB', '50%'],
             [2, $userFolders2, '5GB', '70%'],
         ];
     }
