@@ -13,10 +13,10 @@ class Challenge
         $this->userId = $userId;
     }
 
-    public function calcFolderUsedPercent(Folders $folders)
+    public function calcFolderUsedPercent(Folders $folders, $userStorage)
     {
         $conversion = 1024;
-        $storageGB = intval(str_replace('GB', '', $folders->getStorageSpace($this->userId)));
+        $storageGB = intval(str_replace('GB', '', $userStorage));
         $userFolders = $folders->list($this->userId);
         $spaceUsed = $this->spaceUsed($userFolders);
 
