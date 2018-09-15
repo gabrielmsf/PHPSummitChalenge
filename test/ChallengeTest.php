@@ -13,24 +13,22 @@ class ChallengeTest extends TestCase
     public function providerFoldersUsed()
     {
         $userFolders1 = [
-            (object) ['folderName' => 'Jobs', 'size' => '23MB'],
-            (object) ['folderName' => 'Family', 'size' => '78MB'],
-            (object) ['folderName' => 'Projects', 'size' => '130MB'],
-            (object) ['folderName' => 'Travels', 'size' => '119MB'],
+            (object) ['folderName' => 'Jobs', 'size' => '105MB'],
+            (object) ['folderName' => 'Family', 'size' => '265MB'],
+            (object) ['folderName' => 'Projects', 'size' => '381MB'],
+            (object) ['folderName' => 'Travels', 'size' => '273MB'],
         ];
 
         $userFolders2 = [
-            (object) ['folderName' => 'Drafts', 'size' => '188MB'],
-            (object) ['folderName' => 'Family', 'size' => '205MB'],
-            (object) ['folderName' => 'Projects', 'size' => '290MB'],
-            (object) ['folderName' => 'Others', 'size' => '320MB'],
+            (object) ['folderName' => 'Drafts', 'size' => '931MB'],
+            (object) ['folderName' => 'Projects', 'size' => '365MB'],
+            (object) ['folderName' => 'Others', 'size' => '1198MB'],
             (object) ['folderName' => 'Jobs', 'size' => '1090MB'],
-            (object) ['folderName' => 'Travels', 'size' => '1644MB'],
         ];
 
         return [
-            [1, $userFolders1, '2GB', '18%'],
-            [2, $userFolders2, '5GB', '73%'],
+            [1, $userFolders1, '2GB', '50%'],
+            [2, $userFolders2, '5GB', '70%'],
         ];
     }
 
