@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  dev:
+    build:
+      context: .
+    working_dir: /var/www/html/app
+    volumes:
+      - .:/var/www/html/app
+    entrypoint:
+    - "./docker/start_services.sh"

@@ -10,7 +10,6 @@
   beStrictAboutTestsThatDoNotTestAnything="true"
   processIsolation="false"
   stopOnFailure="false"
-  syntaxCheck="true"
   verbose="true">
   <testsuites>
     <testsuite name="challenge">
